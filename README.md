@@ -6,7 +6,7 @@ Blog-X is a personal blogging website where you can create and share your opinio
 
 
 ## Screenshot
-
+<img src="landing.png">
 
 
 ## Requirements
