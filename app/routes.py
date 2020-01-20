@@ -4,8 +4,8 @@ from PIL import Image
 from flask import render_template, url_for, flash, redirect, request, abort
 from app import app, db, bcrypt, mail
 from app.forms import (RegistrationForm, LoginForm, UpdateAccountForm,
-                             PostForm, RequestResetForm, ResetPasswordForm)
-from .models import User, Post
+                             PostForm, RequestResetForm, ResetPasswordForm, CommentForm)
+from .models import User, Post, Comment
 from flask_login import login_user, current_user, logout_user, login_required
 from flask_mail import Message
 
@@ -112,7 +112,14 @@ def new_post():
 @app.route("/post/<int:post_id>")
 def post(post_id):
     post = Post.query.get_or_404(post_id)
-    return render_template('post.html', title=post.title, post=post)
+    form = CommentForm()
+    if form.validate_on_submit():
+        comments = Comment(content=form.content.data, author=current_user)
+        db.session.add(comments)
+        db.session.commit()
+        flash('Your comment has been created!', 'success')
+        return redirect(url_for('home'))
+    return render_template('post.html', title=post.title, post=post, form=form)
 
 
 @app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
