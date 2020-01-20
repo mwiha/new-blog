@@ -56,3 +56,8 @@ class Comment(db.Model):
         return f"Comment('{self.content}', '{self.date_posted}')"
     
     
+class Quote:
+    def __init__ (self,author,quote):
+        self.author = author
+        self.quote = quote
+        # self.permalink = permalink
