@@ -8,7 +8,7 @@ from app.forms import (RegistrationForm, LoginForm, UpdateAccountForm,
 from .models import User, Post, Comment
 from flask_login import login_user, current_user, logout_user, login_required
 from flask_mail import Message
-from app import request
+# from app import request
 
 @app.route("/")
 @app.route("/home")
@@ -20,7 +20,7 @@ def home():
 
 @app.route("/about")
 def about():
-    quote =request.get_quote()
+    # quote =request.get_quote()
     return render_template('about.html', title='About')
 
 
