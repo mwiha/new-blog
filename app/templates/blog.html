@@ -32,7 +32,7 @@
             <!-- Navbar Right Side -->
             <div class="navbar-nav">
               {% if current_user.is_authenticated %}
-                <a class="nav-item nav-link" href="{{ url_for('new_post') }}">New Blog</a>
+                <a class="nav-item nav-link" href=""></a>
                 <a class="nav-item nav-link" href="{{ url_for('account') }}">Account</a>
                 <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
               {% else %}
@@ -48,6 +48,7 @@
      <div class="ongati text-center">
      <h1>STEVE'S BLOG WEBSITE</h1>
      <P>You can make your blog at anytime and any place.</P>
+     <a class="nav-item nav-link" href="{{ url_for('new_post') }}"><button type="button" class="btn btn-danger">START YOUR BLOG</button></a>
      </div>
     </div>
     <main role="main" class="container">
