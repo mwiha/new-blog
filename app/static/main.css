@@ -82,14 +82,20 @@ body {
     font-size: 2.5rem;
   }
   .steve{
-    background-image: url("https://bit.ly/2G8i0Ui");
+    background-image: url("https://bit.ly/3aqF1Qq");
     background-size: cover;
     height: 50vh;
+    
   }
-  .ongati {
+  .ongati{
     position: absolute;
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #ffffff;
+
+  }
+  .ongati h1{
+    color: white;
+    
   }
