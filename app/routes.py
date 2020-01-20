@@ -109,9 +109,10 @@ def new_post():
                            form=form, legend='New Post')
 
 
-@app.route("/post/<int:post_id>")
+@app.route("/post/<int:post_id>", methods=["POST", "GET"])
 def post(post_id):
     post = Post.query.get_or_404(post_id)
+    comments = Comment.query.all()
     form = CommentForm()
     if form.validate_on_submit():
         comments = Comment(content=form.content.data, author=current_user)
@@ -119,7 +120,7 @@ def post(post_id):
         db.session.commit()
         flash('Your comment has been created!', 'success')
         return redirect(url_for('home'))
-    return render_template('post.html', title=post.title, post=post, form=form)
+    return render_template('post.html', title=post.title, post=post, form=form, comments=comments)
 
 
 @app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
