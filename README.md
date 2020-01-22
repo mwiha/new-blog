@@ -89,7 +89,7 @@ After extracting the files,
 
 
 ## License
-> MIT License &copy; 2020
+> MIT License &copy;Kebaso Steve Ongati 2020
 
 ## Collaborate
 To collaborate, reach me on [ongatikebaso@gmail.com]()
