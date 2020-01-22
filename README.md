@@ -1,5 +1,5 @@
 # STEVE'S BLOG APP
-Blog-X is a personal blogging website where you can create and share your opinions and other users can read and comment on them. blog-x also has random quotes that inspire the users. 
+BLOG-APP is a personal blogging website where you can create and share your opinions and other users can read and comment on them. blog-x also has random quotes that inspire the users. 
 
 ## Author
 > Kebaso Steve Ongati
@@ -18,14 +18,14 @@ The following command installs all the application requirements
 ## Installations
 
 Run 
-``git clone https://github.com/kamauvick/blog-X.git``
+``git clone https://github.com/KEBASOH/BLOG-APP.git``
 
 or download the zip file from github.
 
 After extracting the files, 
 
 1. Navigate to the project folder
->`` cd blog-X.`` 
+>`` cd BLOG-APP.`` 
 
 2. Creating a virtual environment
 >``virtualenv virtual.``
@@ -89,7 +89,7 @@ After extracting the files,
 
 
 ## License
-> MIT License &copy; 2019 Victor Waichigo
+> MIT License &copy; 2020
 
 ## Collaborate
 To collaborate, reach me on [ongatikebaso@gmail.com]()
